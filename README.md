@@ -29,15 +29,16 @@ It wrote the code, ran away, and now the game is unplayable.
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
 
-## 📸 Demo Walkthrough
+## Demo Walkthrough
 
-Describe your fixed game in numbered steps so a reader can follow along without watching a video:
-
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. The user opens the Streamlit number guessing game.
+2. The user enters a low guess like `1`.
+3. The game responds with "Go HIGHER!" because the secret number is higher.
+4. The user enters a high guess like `99`.
+5. The game responds with "Go LOWER!" because the secret number is lower.
+6. The user keeps guessing until they enter the correct number.
+7. When the correct number is entered, the game displays "Correct!" and the player wins.
+8. If the user enters invalid input like `abc`, the game responds that it is not a number instead of crashing.
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
