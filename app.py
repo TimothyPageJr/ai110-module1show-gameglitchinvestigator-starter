@@ -28,23 +28,23 @@ def parse_guess(raw: str):
 
     return True, value, None
 
-
+## FIX: Corrected hint direction logic after testing game behavior and reviewing AI-assisted debugging suggestions.VVV
 def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
 
     try:
         if guess > secret:
-            return "Too High", "📈 Go HIGHER!"
+            return "Too High", "📉 Go LOWER!"
         else:
-            return "Too Low", "📉 Go LOWER!"
+            return "Too Low", "📈 Go HIGHER!"
     except TypeError:
         g = str(guess)
         if g == secret:
             return "Win", "🎉 Correct!"
         if g > secret:
-            return "Too High", "📈 Go HIGHER!"
-        return "Too Low", "📉 Go LOWER!"
+            return "Too High", "📉 Go LOWER!"
+        return "Too Low", "📈 Go HIGHER!"
 
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
